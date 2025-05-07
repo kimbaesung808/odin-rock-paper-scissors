@@ -29,7 +29,7 @@ CREATE function `getComputerChoice`
   RETURN "rock", "paper", or "scissors", randomly
 */
 function getComputerChoice() {
-  computerChoice = Math.random();
+  const computerChoice = Math.random();
   if (computerChoice >= 0 && computerChoice < 0.33) {
     return "rock";
   } else if (computerChoice >= 0.33 && computerChoice < 0.66) {
