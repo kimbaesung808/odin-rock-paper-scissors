@@ -2,14 +2,6 @@
 Create the game "Rock, Paper, Scissors". The game will be played against the computer by the user. 
 Keep track of both the computer's and the user's scores. Write the logic to play one round and then five rounds.
 
-WRITE logic to play one round
-CREATE function `playRound`
-  DEFINE parameters `computerChoice`, `humanChoice`
-  MAKE 'humanChoice' case-insensitive
-  DETERMINE winner
-  PRINT winner to console
-  INCREMENT winner's score
-
 WRITE logic to play five rounds
 EDIT 'playRound' or add helper function(s)
 CREATE function `playGame`
@@ -49,4 +41,48 @@ CREATE function `getHumanChoice`
 */
 function getHumanChoice() {
   return prompt("rock, paper, or scissors?");
+}
+
+/*
+WRITE logic to play one round
+CREATE function `playRound`
+  DEFINE parameters `computerChoice`, `humanChoice`
+  MAKE 'humanChoice' case-insensitive
+  DETERMINE winner
+  PRINT winner to console
+  INCREMENT winner's score
+*/
+function playRound(computerChoice, humanChoice) {
+  humanChoice = humanChoice.toLowerCase();
+  if (computerChoice === "rock") {
+    if (humanChoice === "paper") {
+      console.log("You win. Paper beats Rock.");
+      humanScore++;
+    } else if (humanChoice === "scissors") {
+      console.log("You lose. Rock beats Scissors.");
+      computerScore++;
+    } else {
+      console.log("It's a tie.");
+    }
+  } else if (computerChoice === "paper") {
+    if (humanChoice === "scissors") {
+      console.log("You win. Scissors beats Paper.");
+      humanScore++;
+    } else if (humanChoice === "rock") {
+      console.log("You lose. Paper beats Rock.");
+      computerScore++;
+    } else {
+      console.log("It's a tie.");
+    }
+  } else {
+    if (humanChoice === "rock") {
+      console.log("You win. Rock beats Scissors.");
+      humanScore++;
+    } else if (humanChoice === "paper") {
+      console.log("You lose. Scissors beats Paper.");
+      computerScore++;
+    } else {
+      console.log("It's a tie.");
+    }
+  }
 }
