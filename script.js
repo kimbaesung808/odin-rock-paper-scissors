@@ -2,9 +2,6 @@
 Create the game "Rock, Paper, Scissors". The game will be played against the computer by the user. 
 Keep track of both the computer's and the user's scores. Write the logic to play one round and then five rounds.
 
-CREATE function `getComputerChoice`
-  RETURN "rock", "paper", or "scissors", randomly
-
 CREATE function `getHumanChoice`
   READ user input
   RETURN user input
@@ -30,3 +27,17 @@ CREATE function `playGame`
   DETERMINE winner
   PRINT winner to console
 */
+
+/*
+CREATE function `getComputerChoice`
+  RETURN "rock", "paper", or "scissors", randomly
+*/
+function getComputerChoice() {
+  computerChoice = Math.random();
+  if (computerChoice >= 0 && computerChoice < 0.33) {
+    return "rock";
+  } else if (computerChoice >= 0.33 && computerChoice < 0.66) {
+    return "paper";
+  }
+  return "scissors";
+}
