@@ -2,9 +2,6 @@
 Create the game "Rock, Paper, Scissors". The game will be played against the computer by the user. 
 Keep track of both the computer's and the user's scores. Write the logic to play one round and then five rounds.
 
-CREATE variables `computerScore`, `humanScore` in global scope
-INIT `computerScore` and `humanScore` with 0
-
 WRITE logic to play one round
 CREATE function `playRound`
   DEFINE parameters `computerChoice`, `humanChoice`
@@ -23,6 +20,13 @@ CREATE function `playGame`
   DETERMINE winner
   PRINT winner to console
 */
+
+/*
+CREATE global variables `computerScore`, `humanScore`
+INIT `computerScore` and `humanScore` with 0
+*/
+let computerScore = 0;
+let humanScore = 0;
 
 /*
 CREATE function `getComputerChoice`
