@@ -1,12 +1,8 @@
 /*
-Create the game "Rock, Paper, Scissors". The game will be played against the computer by the user. 
-Keep track of both the computer's and the user's scores. Write the logic to play one round and then five rounds.
+This is a basic implementation of the game "Rock, Paper, Scissors". The game 
+is played against the computer by the user.
 */
 
-/*
-CREATE function `getComputerChoice`
-  RETURN "rock", "paper", or "scissors", randomly
-*/
 function getComputerChoice() {
   const computerChoice = Math.random();
   if (computerChoice >= 0 && computerChoice < 0.33) {
@@ -17,29 +13,10 @@ function getComputerChoice() {
   return "scissors";
 }
 
-/*
-CREATE function `getHumanChoice`
-  READ user input
-  RETURN user input
-*/
 function getHumanChoice() {
   return prompt("rock, paper, or scissors?");
 }
 
-/*
-CREATE function `playGame`
-  INIT variables `computerScore` and `humanScore` with 0
-  CREATE function `playRound`
-    DEFINE parameters `computerChoice`, `humanChoice`
-    MAKE `humanChoice` case-insensitive
-    DETERMINE round winner
-    DISPLAY winner in alert box
-    INCREMENT winner's score
-  FOR five rounds
-    CALL `playRound`
-  DETERMINE game winner
-  PRINT game winner to console
-*/
 function playGame() {
   let computerScore = 0;
   let humanScore = 0;
