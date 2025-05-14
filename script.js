@@ -25,33 +25,33 @@ function playGame() {
     humanChoice = humanChoice.toLowerCase();
     if (computerChoice === "rock") {
       if (humanChoice === "paper") {
-        alert("You won this round. Paper beats Rock.");
+        console.log("You won this round. Paper beats Rock.");
         humanScore++;
       } else if (humanChoice === "scissors") {
-        alert("You lost this round. Rock beats Scissors.");
+        console.log("You lost this round. Rock beats Scissors.");
         computerScore++;
       } else {
-        alert("It's a tie.");
+        console.log("It's a tie.");
       }
     } else if (computerChoice === "paper") {
       if (humanChoice === "scissors") {
-        alert("You won this round. Scissors beats Paper.");
+        console.log("You won this round. Scissors beats Paper.");
         humanScore++;
       } else if (humanChoice === "rock") {
-        alert("You lost this round. Paper beats Rock.");
+        console.log("You lost this round. Paper beats Rock.");
         computerScore++;
       } else {
-        alert("It's a tie.");
+        console.log("It's a tie.");
       }
     } else {
       if (humanChoice === "rock") {
-        alert("You won this round. Rock beats Scissors.");
+        console.log("You won this round. Rock beats Scissors.");
         humanScore++;
       } else if (humanChoice === "paper") {
-        alert("You lost this round. Scissors beats Paper.");
+        console.log("You lost this round. Scissors beats Paper.");
         computerScore++;
       } else {
-        alert("It's a tie.");
+        console.log("It's a tie.");
       }
     }
   }
